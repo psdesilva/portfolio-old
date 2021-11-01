@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Priyanka de Silva's UX Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="css/about.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	
+	<nav class="main-nav" id="navigation">
+		<div class="navbar">
+			<a class="navigation-a" href="index.html#work">Work</a>
+			<a class="navigation-a" href="documents/Resume-final.pdf" target="_blank">Resume</a>
+			<a class="navigation-a" href="about.html">About</a>	
+			<a class="navigation-a" href="contact.html">Contact</a>	
+		</div>
+	</nav>
+
+	<main class="project-cover">
+		<div id="cover-text">
+			<h1>About <span class="green">Me</span></h1>
+			<p>The story so far.</p>
+			<div class="scroll">
+			    <a href="#first">
+			        <div class="mouse">
+			            <div class="wheel"></div>
+			        </div>
+				</a>
+			</div>
+		</div>
+	</main>
+
+	<div class="project-full" id="first">
+		<section class="project-section last">
+			<div class="container">
+				<h2>Hey, I'm Priyanka.</h2>
+				<div class="image">
+					<img src="images/newdp.png">
+				</div>
+				<p>
+					Born and raised in Colombo, Sri Lanka, I attended Vidura College to complete my education till O/Ls. Afterwards, I joined American National College with the hopes of obtaining an Aerospace Engineering degree from Monash University, Australia. However, plans fell through and I ended up switching over to the field of IT and decided to travel to a university in the United States instead. 
+					<br><br>
+					While my initial decision, owing to a childhood of dabbling with PCs, was to study Computer Science, a history of mental complications within the family had me very intrigued in the field of Psychology. Interestingly, one of the universities I had applied for offered a major called 'Cognitive Science', which caught my eye as it appeared to combine both my fields of interest. Later I learned that CogSci was an interdisciplinary study of the mind combining not only CS and Psych, but also Linguistics, Artificial Intelligence, Anthropology and Neuroscience.
+					<br><br>
+					After completing my study of the mind, I was somewhat confused as to how I could apply my knowledge practically. While I was battling this conundrum, two of my professors had a discussion with me and convinced me to apply to a Master's program called 'Human-Computer Interaction'. While I didn't understand what the field was about then, I quickly realized that UX was the perfect way for me to utilize my knowledge of research and the human mind, and apply it to the field of technological innovation. As the user is at the heart of modern UX design, understanding users at a core level undoubtedly helped me conduct better research and create better designs. 
+					<br><br>
+					Outside of academics, I am inherently drawn to helping people. During college I enjoyed helping my peers work through problems so much that I even considered a career as a professor at a certain point. I'm very fond of my family, which is the main reason I moved back home to Sri Lanka. I'm dazzled by science and technology and would love to be at the forefront of technological innovation. In my downtime I enjoy gaming, watching NBA basketball, reading stuff on Reddit, and playing with my cat.   
+				</p>
+			</div>
+		</section>
+	</div>
+	
+	<footer class="main-footer">
+		<div class="footer-connect">
+			<h1>Let's connect.</h1>
+			<div class="social-links">
+				<a href="https://www.facebook.com/chknrss/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+				<a href="https://www.linkedin.com/in/priyanka-de-silva-b391451b2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+				<a href="mailto:mail@priyankadesilva.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope-square"></i></a>
+			</div>
+			<a href="#top">Back to Top</a>
+		</div>
+		<div class="footer-copyright">
+			<p>Copyright &copy; 2020 | Handcrafted by Priyanka de Silva </p>
+		</div>
+	</footer>
+
+	<script>
+	window.addEventListener('scroll', function() {
+		let nav = document.querySelector('nav');
+		nav.classList.toggle('scrolled-nav', window.scrollY >= window.innerHeight);
+	})
+	</script>	
+	
+</body>
+</html>

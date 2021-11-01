@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Priyanka de Silva's UX Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="css/contact.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+	<nav class="main-nav" id="navigation">
+		<div class="navbar">
+			<a class="navigation-a" href="index.html#work">Work</a>
+			<a class="navigation-a" href="documents/Resume-final.pdf" target="_blank">Resume</a>
+			<a class="navigation-a" href="about.html">About</a>	
+			<a class="navigation-a" href="contact.html">Contact</a>	
+		</div>
+	</nav>
+
+	<main class="project-cover">
+		<div id="cover-text">
+			<h1>Contact <span class="green">Me</span></h1>
+			<p>What's on your mind?</p>
+			<div class="scroll">
+			    <a href="#first">
+			        <div class="mouse">
+			            <div class="wheel"></div>
+			        </div>
+				</a>
+			</div>
+		</div>
+	</main>
+
+	<section id="first">
+		<div class="container">
+			<h2>Reach me at</h2>
+			<div class="info">
+				<p><i class="fas fa-phone-alt"></i><a href="tel:+94772255063">+94 77 22 55 063</a></p>
+				<div class="divider"></div>
+				<div class="divider-h"></div>
+				<p><i class="fas fa-envelope"></i><a href="mailto:mail@priyankadesilva.com" target="_blank" rel="noopener noreferrer">mail@priyankadesilva.com</a></p>
+			</div>
+			<h2>Or drop me a message here</h2>
+			<h3 id="thanks">Thank you for contacting me. I'll be in touch shortly.</h3>
+			<div class="message-area">
+				<form class="contact-form" action="contactform.php" method="post">
+					<input type="text" name="name" placeholder="Full name" required>
+					<input type="email" name="mail" placeholder="Your e-mail" required>
+					<input type="text" name="subject" placeholder="Subject">
+					<textarea name="message" placeholder="Message" required></textarea>
+					<button type="submit" name="submit">Send</button>
+				</form>
+			</div>
+		</div>
+	</section>
+	
+	<footer class="main-footer">
+		<div class="footer-connect">
+			<h1>Let's connect.</h1>
+			<div class="social-links">
+				<a href="https://www.facebook.com/chknrss/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+				<a href="https://www.linkedin.com/in/priyanka-de-silva-b391451b2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+				<a href="mailto:mail@priyankadesilva.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope-square"></i></a>
+			</div>
+			<a href="#top">Back to Top</a>
+		</div>
+		<div class="footer-copyright">
+			<p>Copyright &copy; 2020 | Handcrafted by Priyanka de Silva </p>
+		</div>
+	</footer>
+
+	<script>
+	window.addEventListener('scroll', function() {
+		let nav = document.querySelector('nav');
+		nav.classList.toggle('scrolled-nav', window.scrollY >= window.innerHeight);
+	})
+	</script>	
+	
+</body>
+</html>

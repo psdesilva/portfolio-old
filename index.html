@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Priyanka de Silva's UX Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<nav class="main-nav" id="navigation">
+		<div class="navbar">
+			<a class="navigation-a" href="index.html#work">Work</a>
+			<a class="navigation-a" href="documents/Resume-final.pdf" target="_blank">Resume</a>
+			<a class="navigation-a" href="about.html">About</a>	
+			<a class="navigation-a" href="contact.html">Contact</a>	
+		</div>
+	</nav>
+
+	<main id="landing-page">
+		<div id="cover-text">
+			<h1>I'm <span class="txt-rotate" data-period="2000" data-rotate="[ &quot;Priyanka de Silva.&quot;, &quot; a designer.&quot;,  &quot;a researcher.&quot; ]"></span></h1>
+			<p>Using my knowledge of Cognitive Science and Human-Computer Interaction, I aspire to make technology effective, efficient and satisfying to use for all humans.</p>
+		<div class="button">
+				<a href="#work">View my work</a>
+		</div>
+		</div>
+		
+	</main>
+
+	<section id="work">
+		<h1 id="work-title"> Some of my work. </h1>
+		<div class="work-card-outer">
+			<div class="work-card">
+				<div class="work-card-image">
+					<img class="card-image" src="images/silverlininglow.jpg" alt="silver-lining">
+				</div>
+				<div class="work-card-text">
+					<h1>Silver Lining</h1>
+					<div class="divider"></div>
+					<p>Designing a mental health screening app for mobile devices.</p>
+					<div class="tags">
+						<p>
+							Prototype
+						</p>
+						<p>
+							UX life cycle
+						</p>
+						<p>
+							App design
+						</p>
+					</div>
+				</div>
+			</div>
+			<a class="work-card-link" href="silver-lining.html">a</a>
+		</div>
+		<div class="work-card-outer">
+			<div class="work-card">
+				<div class="work-card-image">
+					<img class="card-image" src="images/Anatomylow.jpg" alt="anatomy-now">
+				</div>
+				<div class="work-card-text">
+					<h1>AnatomyNow</h1>
+					<div class="divider"></div>
+					<p>Redesigning an anatomy app developed by CVS Labs, Vietnam.</p>
+					<div class="tags">
+						<p>
+							Redesign
+						</p>
+						<p>
+							Axure
+						</p>
+						<p>
+							Internship
+						</p>
+					</div>
+				</div>
+			</div>
+			<a class="work-card-link" href="anatomynow.html">a</a>
+		</div>
+		<div class="work-card-outer">
+			<div class="work-card">
+				<div class="work-card-image">
+					<img class="card-image" src="images/stickleylow.jpg" alt="stickley">
+				</div>
+				<div class="work-card-text">
+					<h1>Stickley</h1>
+					<div class="divider"></div>
+					<p>Analyzing the UX of a website to provide actionable design recommendations.</p>
+					<div class="tags">
+						<p>
+							Web analytics
+						</p>
+						<p>
+							Eye-tracking
+						</p>
+					</div>
+				</div>
+			</div>
+			<a class="work-card-link" href="stickley.html">a</a>
+		</div>
+		<div class="work-card-outer">
+			<div class="work-card">
+				<div class="work-card-image">
+					<img class="card-image" src="images/Letterlesercoverlow.jpg" alt="letterleser">
+				</div>
+				<div class="work-card-text">
+					<h1>LetterLeser</h1>
+					<div class="divider"></div>
+					<p>Designing and evaluating the UX of an app developed in an agile work environment.</p>
+					<div class="tags">
+						<p>
+							Agile
+						</p>
+						<p>
+							User testing
+						</p>
+					</div>
+				</div>
+			</div>
+			<a class="work-card-link" href="letterleser.html">a</a>
+		</div>
+	</section>
+	<footer class="main-footer">
+		<div class="footer-connect">
+			<h1>Let's connect.</h1>
+			<div class="social-links">
+				<a href="https://www.facebook.com/chknrss/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+				<a href="https://www.linkedin.com/in/priyanka-de-silva-b391451b2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+				<a href="mailto:mail@priyankadesilva.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope-square"></i></a>
+			</div>
+			<a href="#landing-page">Back to Top</a>
+		</div>
+		<div class="footer-copyright">
+			<p>Copyright &copy; 2020 | Handcrafted by Priyanka de Silva </p>
+		</div>
+	</footer>
+
+<script>
+	var TxtRotate = function(el, toRotate, period) {
+	  this.toRotate = toRotate;
+	  this.el = el;
+	  this.loopNum = 0;
+	  this.period = parseInt(period, 10) || 2000;
+	  this.txt = '';
+	  this.tick();
+	  this.isDeleting = false;
+	};
+
+	TxtRotate.prototype.tick = function() {
+	  var i = this.loopNum % this.toRotate.length;
+	  var fullTxt = this.toRotate[i];
+
+	  if (this.isDeleting) {
+	    this.txt = fullTxt.substring(0, this.txt.length - 1);
+	  } else {
+	    this.txt = fullTxt.substring(0, this.txt.length + 1);
+	  }
+
+	  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+	  var that = this;
+	  var delta = 250 - Math.random() * 100;
+
+	  if (this.isDeleting) { delta /= 4; }
+
+	  if (!this.isDeleting && this.txt === fullTxt) {
+	    delta = this.period;
+	    this.isDeleting = true;
+	  } else if (this.isDeleting && this.txt === '') {
+	    this.isDeleting = false;
+	    this.loopNum++;
+	    delta = 500;
+	  }
+
+	  setTimeout(function() {
+	    that.tick();
+	  }, delta);
+	};
+
+	window.onload = function() {
+	  var elements = document.getElementsByClassName('txt-rotate');
+	  for (var i=0; i<elements.length; i++) {
+	    var toRotate = elements[i].getAttribute('data-rotate');
+	    var period = elements[i].getAttribute('data-period');
+	    if (toRotate) {
+	      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+	    }
+	  }
+	  // INJECT CSS
+	  var css = document.createElement("style");
+	  css.type = "text/css";
+	  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.06em solid #666 }";
+	  document.body.appendChild(css);
+	};
+</script>
+
+<script>
+	window.addEventListener('scroll', function() {
+		let nav = document.querySelector('nav');
+		nav.classList.toggle('scrolled-nav', window.scrollY >= window.innerHeight);
+	})
+</script>
+</body>
+</html>
